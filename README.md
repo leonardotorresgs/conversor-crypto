@@ -28,31 +28,31 @@ Favoritos para salvar criptos de interesse.
 
 ### 1. Clonar o repositório
 
-git clone https://github.com/leonardotorresgs/cryptoconverter.git
+```git clone https://github.com/leonardotorresgs/cryptoconverter.git
 cd cryptoconverter
-
+```
 ### 2. Rodar o backend
-
+```
 cd api
 npm install
 npm run dev
-
+```
 ### 3. Criar um arquivo .env dentro de /api
-
+```
 MONGO_URI=sua_string_do_mongo_atlas
 JWT_SECRET=um_segredo_forte
 PORT=5000
-
+```
 ### 4. Rodar o frontend:
-
+```
 cd ../app
 npm install
 npm start
-
+```
 ### 5. Criar um arquivo .env dentro de /app
-
+```
 REACT_APP_API_URL=http://localhost:5000
-
+```
 🌐 Deploy em Produção
 
 Backend (Render)
