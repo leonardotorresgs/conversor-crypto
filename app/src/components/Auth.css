@@ -1,0 +1,66 @@
+html, body {
+  overflow: hidden;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-box {
+  padding: 40px 50px 20px 50px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.auth-box h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+
+.auth-box input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+.auth-box .main-button {
+  width: 150px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-box p {
+    margin-top: 20px;
+}
+
+.auth-box .other-button {
+  background: transparent;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+    opacity: .8;
+}
