@@ -4,10 +4,11 @@ import "./Auth.css";
 export default function Login({ setToken, goRegister }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const API = process.env.REACT_APP_API_URL;
+  
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/auth/login", {
+    const res = await fetch(`${API}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

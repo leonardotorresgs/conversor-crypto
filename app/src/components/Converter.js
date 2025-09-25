@@ -30,6 +30,7 @@ export default function Converter({ token, onLogout }) {
   const [result, setResult] = useState(null);
   const [refreshHistory, setRefreshHistory] = useState(0);
   const [favorites, setFavorites] = useState([]);
+  const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchCryptos = async () => {
@@ -48,7 +49,7 @@ export default function Converter({ token, onLogout }) {
 
   useEffect(() => {
     const fetchFavorites = async () => {
-      const res = await fetch("http://localhost:5000/favorites", {
+      const res = await fetch(`${API}/favorites`, {
         headers: { Authorization: "Bearer " + token }
       });
       const data = await res.json();
@@ -70,7 +71,7 @@ export default function Converter({ token, onLogout }) {
       return;
     }
 
-    const res = await fetch("http://localhost:5000/convert", {
+    const res = await fetch(`${API}/convert`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +91,7 @@ export default function Converter({ token, onLogout }) {
   const handleFavorite = async () => {
     if (!selectedCrypto) return;
 
-    const res = await fetch("http://localhost:5000/favorites", {
+    const res = await fetch(`${API}/favorites`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

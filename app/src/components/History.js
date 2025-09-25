@@ -4,11 +4,12 @@ import "./History.css";
 export default function History({ token, refreshKey }) {
   const [history, setHistory] = useState([]);
   const [historyError, setHistoryError] = useState(null);
+  const API = process.env.REACT_APP_API_URL;
 
   const fetchHistory = () => {
     if (!token) return;
 
-    fetch("http://localhost:5000/convert/history", {
+    fetch(`${API}/convert/history`, {
       headers: { Authorization: "Bearer " + token },
     })
       .then((res) => res.json())
